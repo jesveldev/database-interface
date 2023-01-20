@@ -1,0 +1,80 @@
+#main-menu{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	background: -webkit-linear-gradient(bottom,#DE2573,#FE4F30);
+	width: 15vw;
+	height: 60vh;
+	padding:2%;
+	border-radius: 40px 4px 40px 4px;
+	box-shadow: 0px 0px 10px black;
+}
+
+#main-menu-button-signup{
+	margin: 20% 0;
+}
+
+@keyframes changing-backlight{
+	0%{
+		box-shadow: 0px 0px 5px white;
+	}
+
+	50%{
+		box-shadow: 0px 0px 15px white;
+	}
+
+	100%{
+		box-shadow: 0px 0px 5px white;
+	}
+}
+
+.main-menu-button{
+	margin: 2% 0;
+	border:none;
+	background-color: #AC306D;
+	color:white;
+	padding:3.5% 1%;
+	border-radius: 5px;
+	cursor: pointer;
+	text-shadow: 0px 0px 10px black;
+	box-shadow: 0px 0px 5px white;
+	transition:0.1s linear;
+	font-size: 1.2em;
+
+	animation: changing-backlight 2s linear infinite;
+}
+
+.main-menu-button:hover{
+	background-color: #961E59;
+}
+
+.main-menu-button:nth-child(odd):hover{
+	transform: rotate(2deg);
+}
+
+.main-menu-button:nth-child(even):hover{
+	transform: rotate(-2deg);
+}
+
+.main-menu-button:active{
+	background-color: #78033D;
+}
+
+@media screen and (max-width: 1000px){
+  #main-menu{
+    width: 55vw;
+    align-items: center;
+    height: 45vh;
+  }
+
+  .main-menu-button{
+    padding: 1.5%;
+    font-size: 1.5em;
+    width: 85%;
+  }
+
+
+  #main-menu-button-signup{
+    margin:2.5% 0;
+  }
+}
